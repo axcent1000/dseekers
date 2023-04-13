@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 2023, in script
+    hime nomal "경찰은 범죄자를 취향 따라서 고를 수는 없으니…… 전원 체포"
+Exception: Image 'hime' does not accept attributes 'nomal'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 2023, in script
+    hime nomal "경찰은 범죄자를 취향 따라서 고를 수는 없으니…… 전원 체포"
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\character.py", line 1206, in __call__
+    old_attr_state = self.handle_say_attributes(False, interact)
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\character.py", line 1030, in handle_say_attributes
+    if self.resolve_say_attributes(predicting, attrs):
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\character.py", line 986, in resolve_say_attributes
+    renpy.exports.show(show_image)
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\display\image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 397, in _duplicate
+    args.extraneous()
+  File "C:\Users\cante\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 265, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'hime' does not accept attributes 'nomal'.
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.0.3.22090809
+디지몬 시커즈 1.02
+Thu Apr 13 16:40:01 2023
