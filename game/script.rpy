@@ -1,7 +1,6 @@
 ﻿
 
-# 캐릭터 이미지 오른쪽으로
-define rightCharacter = Position(xalign = 0.8,yalign = 0.0)
+# 전환 효과
 define flash = Fade(0.5, 0.0, 0.5, color="#fff")
 
 # 게임에서 사용할 캐릭터를 정의합니다.
@@ -53,7 +52,10 @@ image bg_chap_1_5_10 = "backgrounds/bg_chap_1_5_10.jpg"
 image bg_chap_1_5_11 = "backgrounds/bg_chap_1_5_11.jpg"
 image bg_chap_1_5_12 = "backgrounds/bg_chap_1_5_12.png"
 image bg_chap_1_6 = "backgrounds/bg_chap_1_6.png"
-image bg_chap_1_6_1 = "backgrounds/bg_chap_1_6_1.png"
+image bg_chap_1_6_1 = "backgrounds/bg_chap_1_6_1.jpg"
+image bg_chap_1_6_2 = "backgrounds/bg_chap_1_6_2.png"
+image bg_chap_1_6_3 = "backgrounds/bg_chap_1_6_3.png"
+image bg_chap_1_7 = "backgrounds/bg_chap_1_7.png"
 
 
 # 소속 로고 이미지
@@ -70,13 +72,19 @@ image obj = im.FactorScale("characters/obj.png", 0.65)
 image digitama = im.FactorScale("characters/digitama.png", 0.65)
 image lighting = im.FactorScale("characters/lighting.png", 1.5)
 image lighting2 = im.FactorScale("characters/lighting2.png", 1.0)
+image loo_windows = im.FactorScale("characters/loo_windows.png", 0.6)
+image loo_windows2 = im.FactorScale("characters/loo_windows2.jpg", 0.6)
+image loo_windows3 = im.FactorScale("characters/loo_windows3.png", 0.6)
+image loo_windows4 = im.FactorScale("characters/loo_windows4.jpg", 0.6)
+image loo_windows5 = im.FactorScale("characters/loo_windows5.png", 0.6)
 
 # 인간 캐릭터 이미지
 image eiji = im.FactorScale("characters/e.png", 0.7)
 image side eiji nomal = "characters/e_side_nomal.png"
 
-image ryusenji = im.FactorScale("characters/ryusenji.png", 1.4)
+image ryusenji = im.FactorScale("characters/ryusenji.png", 1.2)
 image side ryusenji nomal = "characters/ryusenji_side_nomal.png"
+
 
 image hina = im.FactorScale("characters/hina.png", 1.5) # 접수원 하츠네
 
@@ -125,9 +133,9 @@ label start:
                         "Chapter 1-6":
                             jump Chapter1_6
                         "Chapter 1-7":
-                            jump Chapter1_4
+                            jump Chapter1_7
                         "Chapter 1-8":
-                            jump Chapter1_4
+                            jump Chapter1_8
                     #     "Chapter 1-9":
                     #         jump Chapter1_4
                     #     "Chapter 1-10":
@@ -136,6 +144,7 @@ label start:
 # 프롤로그 진행
 label Chapter_P:
 
+    scene black with blinds
     scene bg_chap_f with fade
     play music "audio/bgm/bgm1.mp3" fadein 0.5
 
@@ -311,7 +320,7 @@ label Chapter1_1:
     voice "audio/voice/v37.mp3"
     f "사냥감에 반격당한 티라노몬은 침묵, 빨간 피부에 ―― 노이즈가 퍼져간다."
     
-    scene black with fade
+    scene black with blinds
     scene bg_chap_1_1_2 with blinds
 
     voice "audio/voice/v38.mp3"
@@ -499,6 +508,7 @@ label Chapter1_1:
 
 label Chapter1_2:   
 
+    scene black with blinds
     scene bg_chap_1_2 with blinds
 
     voice "audio/voice/v1.mp3"
@@ -572,6 +582,7 @@ label Chapter1_2:
     voice "audio/voice/v118.mp3"
     f "그렇다, 일이니까."
 
+    scene black with blinds
     scene bg_chap_1_2_2 with blinds
 
     voice "audio/voice/v119.mp3"
@@ -664,7 +675,7 @@ label Chapter1_2:
 
     scene black with fade
 
-    show ryusenji at Position(xalign = 0.5,yalign = 0.5) with dissolve
+    show ryusenji at Position(xalign = 0.5,yalign = -0.2) with dissolve
     voice "audio/voice/v148.mp3"
     f "――류센지 토모노리(교수)"
 
@@ -797,7 +808,8 @@ label Chapter1_2:
 
     voice "audio/voice/v188.mp3"
     f "단말을 두드리고 확인하자, 하츠네는 두 번 놀라면서 패스를 발급하는 것이었다."
-
+    
+    scene black with blinds
     scene bg_chap_1_2_5 with blinds
     voice "audio/voice/v189.mp3"
     f "발급된 특별한 패스를 들고서 최고 수준으로 경례하고 있는 경비원들을 곁눈질하면서 탐지 게이트를 통과한다."
@@ -894,7 +906,8 @@ label Chapter1_2:
     "Chapter 1-2 End..." with Pause(20)
 
 label Chapter1_3:
-    
+
+    scene black with blinds
     scene bg_chap_1_3 with blinds
    
     voice "audio/voice/v1.mp3"
@@ -1218,7 +1231,7 @@ label Chapter1_3:
     
     scene bg_chap_1_2_4 with fade
 
-    show ryusenji at Position(xalign = 0.5,yalign = 0.5) with dissolve
+    show ryusenji at Position(xalign = 0.5,yalign = - 0.2) with dissolve
     voice "audio/voice/v319.mp3"
     f "류센지는, 투베타몬의 데이터를 라보의 기기에 전송하기 시작했다."
     
@@ -1256,6 +1269,7 @@ label Chapter1_3:
 
 label Chapter1_4:
 
+    scene black with blinds
     scene bg_chap_1_4 with blinds
    
     voice "audio/voice/v1.mp3"
@@ -1263,7 +1277,7 @@ label Chapter1_4:
 
     scene bg_chap_1_2_4 with fade
 
-    show ryusenji at Position(xalign = 0.5,yalign = 0.5) with dissolve
+    show ryusenji at Position(xalign = 0.5,yalign = - 0.2) with dissolve
     voice "audio/voice/v330.mp3"
     f "류센지가 말했다. 「디지몬은 살아있다」고."
 
@@ -1305,7 +1319,7 @@ label Chapter1_4:
     f "류센지의 말에, 에이지의 뇌리에 아까 봤던 항공기 낙하 영상이 스쳐갔다."
 
     scene bg_chap_1_2_4 with fade
-    show ryusenji at Position(xalign = 0.5,yalign = 0.5) with dissolve
+    show ryusenji at Position(xalign = 0.5,yalign = -0.2) with dissolve
     voice "audio/voice/v343.mp3"
     e nomal"디지몬을 범죄에 사용하는 녀석들이 있으니까 말이죠. 동업자…… 질 나쁜 크래커지만"
 
@@ -1345,7 +1359,6 @@ label Chapter1_4:
     voice "audio/voice/v355.mp3"
     f "같은 일이 일어났다간 불상사에도 정도가 있다."
     
-    show ryusenji at Position(xalign = 0.5,yalign = 0.5) with dissolve
     voice "audio/voice/v356.mp3"
     ryusenji"디지털 월드와 디지몬에 관한 것은 세간에 널리 알린다는 것은 디지몬 범죄에 대해 세계에 공표한다는 것과 이어지네. 어떻게 될 거라고 생각하나?"
 
@@ -1718,6 +1731,7 @@ label Chapter1_4:
     voice "audio/voice/v477.mp3"
     e nomal "강아지…… 개?" 
 
+    scene black with blinds
     scene bg_chap_1_2_2 with blinds
     voice "audio/voice/v478.mp3"
     f "류센지 교수에게서 새로운 의뢰를 받은 에이지는 혼자서 게이트를 빠져나와 1층의 접수 홀로 돌아왔다."
@@ -1844,6 +1858,7 @@ label Chapter1_4:
 
 label Chapter1_5:
 
+    scene black with blinds
     scene bg_chap_1_5 with blinds
 
     voice "audio/voice/v1.mp3"
@@ -1879,6 +1894,7 @@ label Chapter1_5:
     voice "audio/voice/v1_5_12.mp3"
     f "인류는 아직도 디지털 월드의 아주 일부밖에 몰랐다."
     
+    scene black with blinds
     scene bg_chap_1_5_1 with blinds
     voice "audio/voice/v1_5_13.mp3"
     f "밝지 않는 밤은 있다."
@@ -2331,6 +2347,7 @@ label Chapter1_5:
 
 label Chapter1_6:
 
+    scene black with blinds
     scene bg_chap_1_6 with blinds
 
     voice "audio/voice/v1.mp3"
@@ -2338,207 +2355,770 @@ label Chapter1_6:
     
     voice "audio/voice/v1_6_1.mp3"
     f "크래커 팽, 나가스미 에이지는"
+
     voice "audio/voice/v1_6_2.mp3"
     f "클라이언트인 어바딘 일렉트로닉스(AE사) 덴린구 디지털 라보(DDL)의 류센지 교수를 방문했다."
+
     voice "audio/voice/v1_6_3.mp3"
     f "거기서 최신형 디지몬 독 디지몬 링커와 함께 1체의 디지몬을 받는다."
+
     voice "audio/voice/v1_6_4.mp3"
     f "역 앞 가게에서 규동에 고기랑 달걀을 추가한 것을 테이크아웃해서, 에이지는 오랜만에 기분 좋게 귀가길에 올랐다."
 
+    scene black with blinds
     scene bg_chap_1_6_1 with blinds
+
     voice "audio/voice/v1_6_5.mp3"
     "따-잉"
+
     voice "audio/voice/v1_6_6.mp3"
     f "불구(仏具) 종을 울린다"
+
     voice "audio/voice/v1_6_7.mp3"
     f "자취하는 무척이나 좁은 원룸(다다미 3장) 복층 구조에 목제 불단, 불은 LED다."
+
     voice "audio/voice/v1_6_8.mp3"
     f "화재가 날 수도 있으니 평소에 향은 피우지 않는다."
+
     voice "audio/voice/v1_6_9.mp3"
     e "응, 다녀왔어. 아빠, 엄마, 할아버지랑 할머니도"
+
     voice "audio/voice/v1_6_10.mp3"
     f "덤으로 개도."
+
     voice "audio/voice/v1_6_11.mp3"
     f "위패에는 가족들의 판이 함께 들어있다."
+
     voice "audio/voice/v1_6_12.mp3"
     f "어째선지 옛날에 길렀던 개의 몫도 있다."
+
     voice "audio/voice/v1_6_13.mp3"
     f "손을 맞대고, 에이지는 탁자에서 혼자 저녁을 먹었다."
+
+    scene black with blinds
+    scene bg_chap_1_6_2 with blinds
+
     voice "audio/voice/v1_6_14.mp3"
     f "팔의 디지몬 링커를 본다."
+
     voice "audio/voice/v1_6_15.mp3"
     e "본 적 없는 디지몬이구나- 너"
+
     voice "audio/voice/v1_6_16.mp3"
     f "루가몬."
+
     voice "audio/voice/v1_6_17.mp3"
     f "컬러 액정에는 개와 같은 디지몬이 몸을 둥글게 말고 있었다."
     
     scene black with fade
-    show ryusenji with dissolve
+    show ryusenji at Position(xalign = 0.5, yalign = -0.2) with dissolve
     voice "audio/voice/v1_6_18.mp3"
     ryusenji "――이 디지몬을 육성해주었으면 한다."
     
     
-    scene bg_chap_1_6_1 with fade
+    scene bg_chap_1_6_2 with fade
     voice "audio/voice/v1_6_19.mp3"
     f "류센지에게서 받은 의뢰는, 지극히 심플했다."
 
     voice "audio/voice/v1_6_20.mp3"
     f "GriMM을 들여다보면 디지타마 육성 일은 금방 눈에 띈다."
+
     voice "audio/voice/v1_6_21.mp3"
     f "애완동물로 말하자면 브리더."
+
     voice "audio/voice/v1_6_22.mp3"
     f "일종의 학습형 AI 프로그램인 디지몬의 성장은 탄생부터의 패턴이 크게 관계한다고 한다."
+
     voice "audio/voice/v1_6_23.mp3"
     f "그렇다면 디지몬을 다루는 전문가인 크래커가 브리더를 겸하는 일도 있다는 것이다."
 
-    voice "audio/voice/v1_6_24.mp3"
     scene black with fade
-    show ryusenji with dissolve
+    show ryusenji at Position(xalign = 0.5, yalign = -0.2) with dissolve
+    voice "audio/voice/v1_6_24.mp3"
     ryusenji "――내 연구에 관심이 있다면. 루가몬과의 만남은, 자네에게 있어서 무척이나 흥미로운 것이 될 것일세."
     
-    scene bg_chap_1_6_1 with fade
+    scene bg_chap_1_6_2 with fade
     voice "audio/voice/v1_6_25.mp3"
     e "그 류센지 교수에게 그렇게까지 기대를 받는다면 할 수밖에 없지!"
 
     voice "audio/voice/v1_6_26.mp3"
     f "인생에서 이렇게 흥분한 적은 없었다."
+
     voice "audio/voice/v1_6_27.mp3"
     f "어쨌든 간에 그 사람을 따라간다면 틀림없다."
+
     voice "audio/voice/v1_6_28.mp3"
     f "그렇다고는 해도, 에이지는 디지몬 육성 경험이 그다지 없었다."
+
     voice "audio/voice/v1_6_29.mp3"
     e "티라노몬이 3체 있지만, 하고 있는 건 툴 조정…… 튜닝이니까 말야."
+
     voice "audio/voice/v1_6_30.mp3"
     e "그것도 육성이라고 한다면 그렇긴 한데"
+
     voice "audio/voice/v1_6_31.mp3"
     f "탁자에다 소유중인 디지몬 독을 늘어놓는다."
+
+    show gadget at Position(xalign = 0.5,yalign = 0.35) with dissolve
     voice "audio/voice/v1_6_32.mp3"
     f "흑백 액정 화면에 도트 그림의 티라노몬이 비춰지고 있었다."
+
     voice "audio/voice/v1_6_33.mp3"
     f "격납하고 있는 것은 손바닥에 들어올 사이즈의 독이다."
+
     voice "audio/voice/v1_6_34.mp3"
     f "이 타입은 스펙적으로는 구식이지만"
+
     voice "audio/voice/v1_6_35.mp3"
     f "설계도가 나돌아다니고 있어서 파츠가 비교적 입수하기 쉬워 자작하기 쉽다."
+
     voice "audio/voice/v1_6_36.mp3"
     f "GriMM의 크래커 지향 샵에서는 전용 조립 세트, 완성품이 거래되고 있었다."
+
     voice "audio/voice/v1_6_37.mp3"
     f "에이지도 몇 개인가 소유하고 있다."
+
     voice "audio/voice/v1_6_38.mp3"
     e "납품용 독은 교수님이 메모리 영역이 망가져 있다고 했던가…… "
+
     voice "audio/voice/v1_6_39.mp3"
     e "파츠 교환하야겠네."
+
     voice "audio/voice/v1_6_40.mp3"
     e "뭐, 디지몬 링커가 있으니까 당분간은 괜찮나"
+
+    hide gadget with dissolve
+
     voice "audio/voice/v1_6_41.mp3"
     f "팔에 채워진 신품 디지몬 링커를 보고, 에이지는 떠올랐다는 듯이 씩 웃었다."
+
     voice "audio/voice/v1_6_42.mp3"
     f "이 루가몬은 에이지에게 있어서 마치 행운의 사자다."
+
     voice "audio/voice/v1_6_43.mp3"
     f "소중하게 여겨야지…… 그렇게 생각이 들었다."
+
     voice "audio/voice/v1_6_44.mp3"
     e "――그렇다고 해도, 샤워할 때도 24시간 디지몬 링커를 차고 있으라니, 어떻게 된 거지……?"
+
     voice "audio/voice/v1_6_45.mp3"
     f "완전방수, 항균 사양이니까 문제는 없는 것 같지만……."
+
     voice "audio/voice/v1_6_46.mp3"
     f "에이지가 새로운 가제트의 조작을 외우는 2, 3일 동안에도 루가몬은 성장했다."
+
     voice "audio/voice/v1_6_47.mp3"
     f "디지몬 링커로 에이지의 고동을 느끼면서, 쑥쑥 자라는 디지몬."
+
     voice "audio/voice/v1_6_48.mp3"
     e "뭐랄까 가슴에 품고 기른 내 아이란 느낌이네~"
+
     voice "audio/voice/v1_6_49.mp3"
     f "에이지는 손목시계 안의 디지몬을 사랑스럽게 바라보았다."
+
+    show devo at Position(xalign = 0.5,yalign = 0.3) with dissolve
     voice "audio/voice/v1_6_50.mp3"
     f "디지몬의 성장―― 진화는 체계화되어 있다."
+
     voice "audio/voice/v1_6_51.mp3"
     f "디지타마에서 부화하면 우선 유년기 스테이지로 나아간다."
+
     voice "audio/voice/v1_6_52.mp3"
     f "이것은 디지몬의 아기다."
+
     voice "audio/voice/v1_6_53.mp3"
     f "아직 학습하지 않아서 곧바로는 툴로 유용하게 사용할 수는 없다."
+
     voice "audio/voice/v1_6_54.mp3"
     f "보통은 이 유년기 단계에서 디지몬 육성이 시작하는 것이지만."
+
     voice "audio/voice/v1_6_55.mp3"
     f "루가몬은 이미 다음 스테이지인 성장기다."
+
+    hide devo with dissolve
+
+    # 휴대폰 사용 이미지 추가 필요
+    #
+    #
+
     voice "audio/voice/v1_6_56.mp3"
     f "에이지는 GriMM에서 브리더들에게 질문을 올렸다."
+
     voice "audio/voice/v1_6_57.mp3"
     f "물론 류센지에게서 받은 일에 관한 것, 루가몬에 관한 것은 말하지 않고, 일반적인「개를 닮은」디지몬의 육성법에 대해……."
+
     voice "audio/voice/v1_6_58.mp3"
     f "애당초 루가몬에 관한 건 GriMM을 검색해봐도 전혀 HIT하지 않았던 것이다."
+
     voice "audio/voice/v1_6_59.mp3"
     e "AI학습용 프로그램, 트레이닝 프로그램…… 여러가지 있는걸"
+
     voice "audio/voice/v1_6_60.mp3"
     f "약간 귀찮을지도."
+
     voice "audio/voice/v1_6_61.mp3"
     f "이제와서 에이지는 후회했다."
+
     voice "audio/voice/v1_6_62.mp3"
     e "펫 기르는 게 얼마만이지."
+
     voice "audio/voice/v1_6_63.mp3"
     e "어렸을 적에 길렀던 개가 죽고 난 이래인가"
+
     voice "audio/voice/v1_6_65.mp3"
     f "――디지털 월드의 존재방식, 디지몬의 존재방식을, 이 눈으로, 직접 보는 것."
+
     voice "audio/voice/v1_6_66.mp3"
     f "가상 모니터와 관측 데이터가 아닌"
+
     voice "audio/voice/v1_6_67.mp3"
     f "인간의 오감으로 직접 디지털 월드를 파악하는 것."
+
     voice "audio/voice/v1_6_68.mp3"
     f "류센지는 그런 굉장한 연구를 하고 있는 선생님이다."
+
     voice "audio/voice/v1_6_69.mp3"
     e "그런 게 가능하다면 보고 싶은걸."
+
     voice "audio/voice/v1_6_70.mp3"
     e "나도, 류센지 교수님이 보고 있는 세계를."
+
     voice "audio/voice/v1_6_71.mp3"
     e "디지몬이 살고 있는 세계…… 인가."
+
     voice "audio/voice/v1_6_72.mp3"
     e "루가몬…… 너를 길러내면, 완전체나 궁극체까지 진화시키면 뭔가 알 수 있는 걸까?"
+
     voice "audio/voice/v1_6_73.mp3"
     f "리얼월드와 디지털 월드의 「굴레」를 초월한다."
+
     voice "audio/voice/v1_6_74.mp3"
     f "류센지가 말한 것처럼, 그런 초 일류 크래커가 될 수 있다면."
+
     voice "audio/voice/v1_6_75.mp3"
     f "알림이 왔다."
+
     voice "audio/voice/v1_6_76.mp3"
     f "스마트폰을 손에 든다." 
+
     voice "audio/voice/v1_6_77.mp3"
     f "GriMM에서 질문한 것에 답변이 달린 모양이다."
+
     voice "audio/voice/v1_6_78.mp3"
     "답글" "――팽, 디지몬 육성 데뷔 축하해!"
+
     voice "audio/voice/v1_6_79.mp3"
     "답글" "성장기부터 육성하는 거라면 다른 디지몬이랑 같이 다수 육성을 추천해."
+
     voice "audio/voice/v1_6_80.mp3"
     "답글" "2체 이상 있으면 알아서 놀면서 점점 학습해 가니까 말야."
+
     voice "audio/voice/v1_6_81.mp3"
     e "과연, 디지몬 다수 육성인가! 과연 집합지성!"
+
     voice "audio/voice/v1_6_82.mp3"
     f "에이지는 바로 티라노몬이 든 독을 디지몬 링커에 접속시켰다."
+
     voice "audio/voice/v1_6_83.mp3"
     f "최신형 디지몬 링커에는 충분하고도 남을 정도의 용량과 처리능력이 있었다."
+
     voice "audio/voice/v1_6_84.mp3"
     f "루가몬을 티라노몬들과 같이 두면 되겠지."
+
     voice "audio/voice/v1_6_85.mp3"
     f "하지만…… 에이지는 깜빡, 그 답변의 뒷 내용을 읽지 않았다."
+
     voice "audio/voice/v1_6_86.mp3"
     "답글" "――디지몬에 따라서는 개랑 마찬가지로 무리의 서열을 중요시하니까."
+
     voice "audio/voice/v1_6_87.mp3"
     "답글" "훈육은 처음이 중요해!"
+
     voice "audio/voice/v1_6_88.mp3"
     f "그렇게 해서……."
+
     voice "audio/voice/v1_6_89.mp3"
     f "며칠 후, 큰일이 일어나 버렸다."
 
+    show bg_chap_1_6_3 with fade
     "Chapter 1-6 End..." with Pause(20)
 
 label Chapter1_7:
 
+    scene black with blinds
     scene bg_chap_1_7 with blinds
+
+    voice "audio/voice/v1.mp3"
+    "Chapter1-6" "Eiji: Wolf of ninth avenue" 
+
     
+    scene black with blinds
+    scene bg_chap_1_2_4 with blinds
 
+    voice "audio/voice/v1_7_1.mp3"
+    f "어바딘 일렉트로닉스 덴린구 디지털 라보."
 
+    voice "audio/voice/v1_7_2.mp3"
+    f "긴급 연락을 받은 에이지는 바로 DDL로 나가 오피스에서 울상을 지었다."
 
+    voice "audio/voice/v1_7_3.mp3"
+    e nomal "교수님~! 류센지 교수님~!" with vpunch
+
+    show ryusenji at Position(xalign = 0.5,yalign = -0.2) with dissolve
+    voice "audio/voice/v1_7_4.mp3"  
+    ryusenji "안녕, 에이지 군"
+
+    voice "audio/voice/v1_7_5.mp3"  
+    f "이미 오후지만, 류센지는 항상 「안녕(おはよう)」이라고 하는 타입인 듯하다."
+
+    voice "audio/voice/v1_7_6.mp3"  
+    e "뭐에요, 이 디지몬은!" with vpunch
+
+    voice "audio/voice/v1_7_7.mp3"  
+    f "디지몬 링커의 화면에서 루가몬이 낮잠을 자고 있었다."
+
+    voice "audio/voice/v1_7_8.mp3"  
+    f "배가 부른 것인지, 좋은 꿈을 꾸고 있는 듯하다."
+
+    voice "audio/voice/v1_7_9.mp3"  
+    ryusenji "육성은 순조로운 것 같군. 진화하는 게 기대되는걸"
+
+    voice "audio/voice/v1_7_10.mp3"  
+    f "류센지는 빙긋 웃었다."
+
+    voice "audio/voice/v1_7_11.mp3" 
+    f "디지몬은 성장에 따라 모습을 바꾸어 간다."
+    hide ryusenji with dissolve
+
+    show devo at Position(xalign = 0.5,yalign = 0.3) with dissolve
+    voice "audio/voice/v1_7_12.mp3"
+    f "디지타마＞유년기(I・II)＞성장기＞성숙기＞완전제＞궁극체"
+
+    voice "audio/voice/v1_7_13.mp3"
+    f "예를 들어 곤충이 알아서 애벌레, 번데기, 성충이 되듯이."
+
+    voice "audio/voice/v1_7_14.mp3"  
+    f "다른 점은, 같은 개체가 전혀 다른 디지몬으로 변화해 가는 것."
+
+    voice "audio/voice/v1_7_15.mp3"  
+    f "그래서 디지몬의 성장을 가리켜 학술적으로 굳이 「진화」라고 호칭하고 있다."
+
+    hide devo with dissolve
+
+    show ryusenji at Position(xalign = 0.5,yalign = -0.2) with dissolve
+    voice "audio/voice/v1_7_16.mp3"  
+    ryusenji "――성숙기로 진화하면 인센티브를 지불하지"
+
+    voice "audio/voice/v1_7_17.mp3"  
+    e "인센티브…… 추가보수!" with vpunch
+
+    voice "audio/voice/v1_7_18.mp3"  
+    ryusenji "완전체, 설마 했던 궁극체까지 되면 더 둠뿍 내지."
+
+    voice "audio/voice/v1_7_19.mp3"  
+    ryusenji "루가몬은 어떤 디지몬으로 진화하려나."
+
+    voice "audio/voice/v1_7_20.mp3" 
+    ryusenji "에이지 군과 루가몬의 멋진 모습이 보고 싶은걸" 
+
+    voice "audio/voice/v1_7_21.mp3"  
+    f "류센지는 알기 쉽게 에이지를 응원했다."
+
+    voice "audio/voice/v1_7_22.mp3"  
+    e "보고 싶은걸…… 이 아니라요! 돈다발의 폭력으로 이야기를 돌리지 말아주세요, 못된 어른이시네"
+
+    voice "audio/voice/v1_7_23.mp3"  
+    ryusenji "흠"
+
+    voice "audio/voice/v1_7_24.mp3"  
+    e "보셨죠, 어제 보냈던 육성 레포트!"
+
+    voice "audio/voice/v1_7_25.mp3"  
+    f "에이지는 항의했다."
+
+    voice "audio/voice/v1_7_26.mp3" 
+    ryusenji "내 메일박스에는 매일 수백 수천의 메일이 오네. 실은 거의 열어보지 않는다만"
+
+    voice "audio/voice/v1_7_27.mp3"  
+    f "류센지는 시치미를 떼고 말했다."
+
+    voice "audio/voice/v1_7_28.mp3"  
+    e "그런 걸 전부 체크하고 있다가는 날이 저물겠지요……"
+
+    voice "audio/voice/v1_7_29.mp3"  
+    ryusenji "그 말대로네. 나는 연구자이며, 연구 이외에 돌릴 시간은 없어. 하지만……"
+
+    voice "audio/voice/v1_7_30.mp3"  
+    ryusenji "에이지 군에게서 온 연락만은 알림을 설정해두고 체크하고 있지"
+
+    voice "audio/voice/v1_7_31.mp3"  
+    e "왠지 가슴이 꽈악 조여오네요"
+
+    voice "audio/voice/v1_7_32.mp3"  
+    f "에이지는 자기 가슴을 끌어안았다."
+
+    voice "audio/voice/v1_7_33.mp3"  
+    ryusenji "에이지 군은, 나의 소중한 일 상대니까"
+
+    voice "audio/voice/v1_7_34.mp3"  
+    f "교수는 이런 점을 미워할 수가 없다."
+
+    voice "audio/voice/v1_7_35.mp3"  
+    f "그렇달까 좋아하게 되어 버린다."
+
+    voice "audio/voice/v1_7_36.mp3"  
+    f "디지털 월드의 세계적 권위자가, 크래커 젊은이에 지나지 않는 에이지를 일 상대라고 말해준다."
+
+    voice "audio/voice/v1_7_37.mp3"  
+    f "에이지의 보고서를 모니터에 펼쳐놓고, 류센지는 첨부된 영상 파일을 재생했다."
+
+    hide ryusenji with dissolve
+
+    show loo_windows at Position (xalign = 0.5, yalign =0.25) with dissolve
+
+    voice "audio/voice/v1_7_38.mp3"
+    f "――루가몬 성장기 마수형 바이러스종"  
+
+    hide loo_windows with dissolve
+
+    show loo_windows2 at Position (xalign = 0.5, yalign = 0.25) with dissolve
+    voice "audio/voice/v1_7_39.mp3"  
+    f "가상 육성 케이지다. 영상의 날짜는 어제."
+
+    voice "audio/voice/v1_7_40.mp3"  
+    f "루가몬이 먹이를 먹고 있다."
+
+    voice "audio/voice/v1_7_41.mp3"  
+    f "디지몬은 먹이를 먹지 않으면 성장을 멈춰 버린다."
+
+    voice "audio/voice/v1_7_42.mp3"  
+    f "그래서 공복이 되면 본능적으로 먹이를 계속해서 먹는다."
+
+    voice "audio/voice/v1_7_43.mp3"  
+    f "AI에게 식사라니 기묘하게 느껴지지만, 먹이란 말하자면 데이터이며 정보다."
+
+    voice "audio/voice/v1_7_44.mp3"  
+    f "인간 역시 책을 읽거나 영상을 보거나, 공부해서 정보를 얻지 않으면 아무리 해도 성장하지 않을 것이다."
+
+    voice "audio/voice/v1_7_45.mp3"  
+    f "루가몬의 앞에는, 어째선지 먹이 그릇이 4개."
+
+    voice "audio/voice/v1_7_46.mp3"  
+    f "케이지 구석에는, 다수 육성을 하고 있던 3체의 티라노몬이 어떻게 된 일인지 덜덜 떨고 있었다."
+
+    voice "audio/voice/v1_7_47.mp3"  
+    ryusenji nomal "――티라노몬으로는 3체나 있어도 버거운가"
+
+    voice "audio/voice/v1_7_48.mp3"  
+    f "류센지는 흥미 깊은 듯이 체크했다."
+
+    voice "audio/voice/v1_7_49.mp3"  
+    e "티라노몬은 성숙기인데. 한단계 아래 성장기인 루가몬에게 이렇게 되어 버리다니……"
+
+    voice "audio/voice/v1_7_50.mp3"  
+    ryusenji "루가몬은 마수형, 그 중에서도 늑대의 데이터에 강한 영향을 받고 있지"
+
+    voice "audio/voice/v1_7_51.mp3"  
+    f "류센지가 설명했다."
+
+    voice "audio/voice/v1_7_52.mp3"  
+    e nomal "늑대…… 저거, 개가 아니었구나"
+
+    voice "audio/voice/v1_7_53.mp3" 
+    f "에이지는 머리를 긁적였다."
+
+    voice "audio/voice/v1_7_54.mp3"  
+    ryusenji "개라고 한다면 개다만…… 좀 더 원시적, 늑대를 길들인 것의 자손이 개일세."
+
+    voice "audio/voice/v1_7_55.mp3"  
+    ryusenji "어쨌든 간에 무리를 짓고 보스가 존재하지."
+
+    voice "audio/voice/v1_7_56.mp3"  
+    ryusenji "무리 내에서의 순위 매기기에 엄격하네"
+
+    voice "audio/voice/v1_7_57.mp3"  
+    e "그럼…… 같은 케이지에서 길렀으니까? 루가몬 녀석 티라노몬을…… 부하로 삼았다고요?!"
+
+    voice "audio/voice/v1_7_58.mp3"  
+    ryusenji "그런 듯하군. 먹이는 물론 보스가 우선이지"
+
+    voice "audio/voice/v1_7_59.mp3"  
+    f "류센지는 어째선지 미소짓고 있었다."
+
+    voice "audio/voice/v1_7_60.mp3"  
+    e "그렇다고 남의 먹이까지 먹다니, 이 먹보! 아니 처음에는 티라노몬 째로 먹으려고 했다고요, 이녀석!"
+
+    voice "audio/voice/v1_7_61.mp3"  
+    ryusenji "호오! 그거 흥미롭군. 그야말로 거신(巨神)마저 먹어치우는 신화 속 마랑(魔狼)과 같이인가"
+
+    voice "audio/voice/v1_7_62.mp3"  
+    e "아무리 그래도 너무 호러여서 영상은 안 찍었어요…… 그보다, 이 녀석 먹이 너무 많이 먹어! 코스트 너무 무거워! 똥도 너무 많이 싸!"
+
+    voice "audio/voice/v1_7_63.mp3"  
+    ryusenji "…………그래서"
+
+    voice "audio/voice/v1_7_64.mp3"  
+    e "네?"
+
+    voice "audio/voice/v1_7_65.mp3"  
+    ryusenji "무슨 문제가 있는 건가?"
+
+    voice "audio/voice/v1_7_66.mp3"  
+    f "류센지에게 반대로 질문을 받아 버렸다."
+
+    voice "audio/voice/v1_7_67.mp3"  
+    f "과연……"
+
+    voice "audio/voice/v1_7_68.mp3"  
+    f "천재 연구자에게 있어서, 이것만으로는 흥미로운 일밖에 되지 않는다."
+
+    voice "audio/voice/v1_7_69.mp3"  
+    f "에이지는 한숨을 쉬었다."
+
+    voice "audio/voice/v1_7_70.mp3"  
+    e "루가몬을 벤치마크 돌린 결과가, 다음의…… 그 데이터에요."
+
+    voice "audio/voice/v1_7_71.mp3"  
+    e "확실히 일반적인 성장기의 스코어는 아니에요"
+
+    voice "audio/voice/v1_7_72.mp3" 
+    ryusenji "흠" 
+
+    voice "audio/voice/v1_7_73.mp3" 
+    e "그런데 교수님…… 루가몬의 이마에 있는 거, 뭔가요, 저거……" 
+
+    hide loo_windows2 with dissolve
+
+    show loo_windows3 at Position (xalign = 0.5, yalign = 0.25) with dissolve
+
+    voice "audio/voice/v1_7_74.mp3" 
+    f "에이지는 영상을 일시정지, 확대했다." 
+
+    voice "audio/voice/v1_7_75.mp3"  
+    f "루가몬의 이마에서 코에 걸쳐서 면갑(面甲), 프로텍터가 달려 있었지만. "
+
+    voice "audio/voice/v1_7_76.mp3"  
+    f "그 이마의 부분에 반짝이는 보석 같은 것이 박혀 있다."
+
+    voice "audio/voice/v1_7_77.mp3"  
+    e "――뭔가 신경쓰인다고 해야 하나. 빛나거나 그럴 때도 있고"
+
+    voice "audio/voice/v1_7_78.mp3"  
+    ryusenji "뭐라고도 할 수 없겠군. 하지만 에이지 군, 자네의 착안점은 날카로워"
+
+    voice "audio/voice/v1_7_79.mp3"  
+    e "그쵸-"
+
+    voice "audio/voice/v1_7_80.mp3"  
+    ryusenji "사용감은? 이미, 사용해 봤겠지"
+
+    voice "audio/voice/v1_7_81.mp3"  
+    e "너무 피키해서 AI툴로서의 성능은 평가 불능이에요"
+
+    voice "audio/voice/v1_7_82.mp3"  
+    f "에이지는 보류했다."
+
+    voice "audio/voice/v1_7_83.mp3"  
+    ryusenji "즉?"
+
+    voice "audio/voice/v1_7_84.mp3"  
+    e "툴의 커맨드가 통하지 않는달까…… 말하는 걸 안 듣는다고요, 이녀석! 알은커녕, 산책도 못한다고요."
+
+    voice "audio/voice/v1_7_85.mp3"  
+    e "그러고 보니 옛날에 길렀던 개도 산책 나갔을 때 제멋대로 쭉쭉 나가버리는 타입이었지만"
+
+    voice "audio/voice/v1_7_86.mp3" 
+    ryusenji "…………. 기를 자신이 없다고?" 
+
+    voice "audio/voice/v1_7_87.mp3"  
+    e "설마요! 기를 거에요, 일이고…… 루가몬에 흥미도 있고! 반드시 진화시켜 보이겠어요!"
+
+    voice "audio/voice/v1_7_88.mp3"  
+    ryusenji "홀로라이즈시켜 보게"
+
+    voice "audio/voice/v1_7_89.mp3" 
+    f "류센지가 말했다." 
+
+    voice "audio/voice/v1_7_90.mp3"  
+    f "에이지는 디지몬 링커에서 커맨드를 고른다."
+
+    hide loo_windows3 with dissolve
+
+    voice "audio/voice/v1_7_90_1.mp3"
+    "삑 삑...지이잉"
+    
+    show loo_windows4 at Position (xalign = 0.5, yalign = 0.25) with dissolve # 추후 이미지 변경 필요 
+    voice "audio/voice/v1_7_91.mp3"  
+    f "자고 있는 루가몬이 그대로 홀로라이즈했다."
+
+    voice "audio/voice/v1_7_92.mp3"  
+    f "복슬복슬하고, 크다."
+
+    voice "audio/voice/v1_7_93.mp3"  
+    f "성장기 디지몬은, 물론 종류에 따라 다르지만, 대체로 체장 1미터 정도 사이즈다."
+
+    voice "audio/voice/v1_7_94.mp3"  
+    f "루가몬도 허스키견이라던가, 그야말로 소형 늑대 정도의 크기다."
+
+    voice "audio/voice/v1_7_95.mp3"  
+    f "디지몬 자체가 땅딸막한 포름(forme)이라서, 실내에 있으면 존재감이 있다."
+
+    voice "audio/voice/v1_7_96.mp3"  
+    f "털은 블루 그레이, 푸른 늑대다. 눈동자는 레드."
+
+    voice "audio/voice/v1_7_97.mp3"  
+    f "할 수만 있다면, 푹신푹신 묻혀보고 싶다."
+
+    voice "audio/voice/v1_7_98.mp3"  
+    ryusenji "그 디지몬 링커는 24시간, 에이지 군의 생체정보를 체크하고 있지."
+
+    voice "audio/voice/v1_7_99.mp3"  
+    ryusenji "루가몬의 성장 정보와 맞추어 데이터를 검증해 봤는데…… "
+
+    voice "audio/voice/v1_7_99_1.mp3"
+    ryusenji "실로!" with vpunch
+
+    voice "audio/voice/v1_7_100.mp3"  
+    f "류센지는 큰 목소리를 냈다."
+
+    voice "audio/voice/v1_7_101.mp3"  
+    e "왁? 깜짝 놀랐네" with vpunch
+
+    voice "audio/voice/v1_7_102.mp3"  
+    ryusenji "실로 훌륭해!"
+
+    voice "audio/voice/v1_7_103.mp3"  
+    f "류센지는 대절찬했다."
+
+    voice "audio/voice/v1_7_104.mp3"  
+    e "...? 갑자기 칭찬받았다"
+
+    voice "audio/voice/v1_7_104_1.mp3"
+    ryusenji "이 수치를 보게나!"
+
+    hide loo_windows4 with dissolve
+
+    show loo_windows5 at Position (xalign = 0.5, yalign = 0.25) with dissolve
+    voice "audio/voice/v1_7_105.mp3"  
+    f "류센지는 평가 레포트를 표시하고, 흥분해서 화면을 가리켰다."
+
+    voice "audio/voice/v1_7_106.mp3"  
+    e "「DS치」……? 그보다, 못 읽겠는데요"
+
+    voice "audio/voice/v1_7_107.mp3"  
+    f "수치에 블라인드가 쳐져 있다. 크래커 업계에서도 들어본 적 없는 용어다만……."
+
+    voice "audio/voice/v1_7_108.mp3"  
+    ryusenji "그건 D4일세"
+
+    voice "audio/voice/v1_7_109.mp3" 
+    e "아, 기밀"
+
+    voice "audio/voice/v1_7_110.mp3" 
+    ryusenji "내가 설계한 디지몬과의 상성을 가리키는 하나의 지표네." 
+
+    voice "audio/voice/v1_7_111.mp3"  
+    ryusenji "에이지 군…… 자네와 루가몬의 상성만은 이미 일류 크래커에도 뒤지지 않아"
+
+    voice "audio/voice/v1_7_112.mp3"  
+    e "진짜로……!"
+
+    voice "audio/voice/v1_7_113.mp3"  
+    f "에이지는 바닥에서 낮잠을 자고 있는 채인 루가몬을 봤다."
+
+    voice "audio/voice/v1_7_114.mp3"  
+    ryusenji "자네에게 일을 맡긴 내 눈이 옹이구멍이 아니어서 다행이야"
+
+    voice "audio/voice/v1_7_115.mp3"  
+    e "그렇단 건, 전 이녀석…… 루가몬을, 지금 당장 진화시킬 수 있다거나 하는 건가요?! 성숙기…… 완전체, 궁극체로!"
+
+    voice "audio/voice/v1_7_116.mp3"  
+    ryusenji "그건 알 수 없어"
+
+    voice "audio/voice/v1_7_117.mp3"  
+    e "어째서요?"
+
+    voice "audio/voice/v1_7_118.mp3" 
+    ryusenji "DS치는, 어디까지나 퍼텐셜을 가리키는 지표야" 
+
+    voice "audio/voice/v1_7_119.mp3"  
+    e "즉 가능성은 있는 거구나……!"
+
+    voice "audio/voice/v1_7_120.mp3" 
+    f "에이지는 완전히 의욕이 가득 채워졌다."
+
+    voice "audio/voice/v1_7_121.mp3"  
+    f "디지몬과의 상성……."
+
+    voice "audio/voice/v1_7_122.mp3"  
+    f "에이지는 그런 걸 그다지 생각해본 적은 없었다."
+
+    voice "audio/voice/v1_7_123.mp3" 
+    f "물론 디지몬이 툴로서 자신이 쓰기 쉬운지 아닌지는 있었지만." 
+
+    voice "audio/voice/v1_7_124.mp3"  
+    e "저는…… 티라노몬이라던가, 어느 정도, 다들 쓰고 있는 디지몬밖에 접해본 적이 없었어요"
+
+    voice "audio/voice/v1_7_125.mp3"  
+    f "크래커 사이에서 디지몬이 보급되어 있는 만큼 툴의 조정이 쉽다."
+
+    voice "audio/voice/v1_7_126.mp3"  
+    f "듣고 베끼면 되니까다."
+
+    voice "audio/voice/v1_7_127.mp3"  
+    f "최근 들어서는 사이보그형이 유행하고 있다는 듯하지만."
+
+    voice "audio/voice/v1_7_128.mp3"  
+    ryusenji "지금까지 디지몬은 어디서 입수해 왔던 건가? GriMM인가"
+
+    voice "audio/voice/v1_7_129.mp3"  
+    e "네. 일본에서는 반쯤 비합법이지만요"
+
+    voice "audio/voice/v1_7_130.mp3"
+    ryusenji "합법인 나라도 있으니까 말이지. 네트워크…… 디지털 월드에는 국경도 법률도 없다"  
+
+    voice "audio/voice/v1_7_131.mp3" 
+    e "그거! 「디지털 월드에 국경은 없다.」"
+
+    voice "audio/voice/v1_7_132.mp3"  
+    ryusenji "에이지 군…… 자네는, 그것이 누구의 말인지 알고 있는가"
+
+    voice "audio/voice/v1_7_133.mp3"  
+    f "류센지가 물었다."
+
+    voice "audio/voice/v1_7_134.mp3"  
+    e "…………"
+
+    voice "audio/voice/v1_7_135.mp3"  
+    f "에이지는 말문이 막혔다."
+
+    voice "audio/voice/v1_7_136.mp3" 
+    e "누구랄까…… 모두가?" 
+
+    voice "audio/voice/v1_7_137.mp3"  
+    e "GriMM의 크래커가 입에 달고 다니는 말이죠. 유래 같은 게 있나요?"
+
+    voice "audio/voice/v1_7_138.mp3" 
+    f "그 대답에, 류센지는 배우처럼 어깨를 으쓱였다."
+
+    voice "audio/voice/v1_7_139.mp3"  
+    ryusenji "에이지 군, 자네의 직업은?"
+
+    voice "audio/voice/v1_7_140.mp3"
+    e "크래커요"  
+    
+    voice "audio/voice/v1_7_141.mp3"  
+    ryusenji "그럼「크랙팀」을 알고 있겠지"
+
+    "Chapter 1-7 End..." with Pause(20)
+
+label Chapter1_8:
+
+    scene black with blinds
+    scene bg_chap_1_8 with blinds
  
-
+    voice "audio/voice/v1.mp3"
+    "Chapter1-6" "Eiji: Wolf of ninth avenue" 
 
 
 
