@@ -13,6 +13,7 @@
 
 
 
+
 ## 기본 ##########################################################################
 
 ## 인간이 읽을 수 있는 게임의 이름. 기본 윈도우의 제목으로 사용되며, 인터페이스
@@ -188,6 +189,26 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+
+   # Declare three archives.
+    build.archive("scripts", "all")
+    build.archive("images", "all")
+    build.archive("media", "all") # 비디오, 오디오 대상
+ 
+    # Put script files into the scripts archive.
+    build.classify("game/**.rpy", "scripts")
+    build.classify("game/**.rpyc", "scripts")
+ 
+    # Put images into the images archive.
+    build.classify("game/**.jpg", "images")
+    build.classify("game/**.png", "images")
+ 
+    # 비디오, 오디오 대상
+    build.classify("game/**.mp4", "media")
+    build.classify("game/**.webm", "media")
+    build.classify("game/**.mp3", "media")
+    build.classify("game/**.ogg", "media")
+
 
     ## 파일을 아카이브하려면 'archive'로 분류하십시오.
 

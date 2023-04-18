@@ -51,18 +51,23 @@ image bg_chap_1_5_9 = "backgrounds/bg_chap_1_5_9.png"
 image bg_chap_1_5_10 = "backgrounds/bg_chap_1_5_10.jpg"
 image bg_chap_1_5_11 = "backgrounds/bg_chap_1_5_11.jpg"
 image bg_chap_1_5_12 = "backgrounds/bg_chap_1_5_12.png"
-image bg_chap_1_6 = "backgrounds/bg_chap_1_6.png"
+image bg_chap_1_6 = "backgrounds/bg_chap_1_6.png" # 챕터 1-6
 image bg_chap_1_6_1 = "backgrounds/bg_chap_1_6_1.jpg"
 image bg_chap_1_6_2 = "backgrounds/bg_chap_1_6_2.png"
 image bg_chap_1_6_3 = "backgrounds/bg_chap_1_6_3.png"
-image bg_chap_1_7 = "backgrounds/bg_chap_1_7.png"
+image bg_chap_1_7 = "backgrounds/bg_chap_1_7.png" # 챕터 1-7
+image bg_chap_1_8 = "backgrounds/bg_chap_1_8.png" # 챕터 1-8
+image bg_chap_1_8_1 = "backgrounds/bg_chap_1_8_1.png"
+image bg_chap_1_9 = "backgrounds/bg_chap_1_9.png" # 챕터 1-9
+image bg_chap_1_9_1 = "backgrounds/bg_chap_1_9_1.png"
+image bg_chap_1_9_4 = "backgrounds/bg_chap_1_9_4.png"
 
 
 # 소속 로고 이미지
-image fang = "characters/fang.png"
-image dd = "characters/dd.png"
-image jj = "characters/jj.png"
-image soc = "characters/soc.png"
+image fang = "characters/fang.png" # 팡
+image dd = "characters/dd.png" # 디지대
+image jj = "characters/jj.png" # 해커 저지
+image soc = "characters/soc.png" # 크래커 그룹 SoC
 
 # 아이템
 image gadget = im.FactorScale("characters/gadget.png", 0.6)
@@ -73,10 +78,11 @@ image digitama = im.FactorScale("characters/digitama.png", 0.65)
 image lighting = im.FactorScale("characters/lighting.png", 1.5)
 image lighting2 = im.FactorScale("characters/lighting2.png", 1.0)
 image loo_windows = im.FactorScale("characters/loo_windows.png", 0.6)
-image loo_windows2 = im.FactorScale("characters/loo_windows2.jpg", 0.6)
+image loo_windows2 = im.FactorScale("characters/loo_windows2.png", 0.6)
 image loo_windows3 = im.FactorScale("characters/loo_windows3.png", 0.6)
-image loo_windows4 = im.FactorScale("characters/loo_windows4.jpg", 0.6)
+image loo_windows4 = im.FactorScale("characters/loo_windows4.png", 0.6)
 image loo_windows5 = im.FactorScale("characters/loo_windows5.png", 0.6)
+image hacktv = im.FactorScale("characters/hacktv.png", 0.6)
 
 # 인간 캐릭터 이미지
 image eiji = im.FactorScale("characters/e.png", 0.7)
@@ -88,8 +94,8 @@ image side ryusenji nomal = "characters/ryusenji_side_nomal.png"
 
 image hina = im.FactorScale("characters/hina.png", 1.5) # 접수원 하츠네
 
-image hime = im.FactorScale("characters/hime.png", 1.2) # 타마히메
-image side hime nomal = im.FactorScale("characters/hime_side_nomal.png", 1.0) # 타마히메
+image hime = im.FactorScale("characters/hime.png", 1.2) # 타마히메 사츠키
+image side hime nomal = im.FactorScale("characters/hime_side_nomal.png", 1.0) # 타마히메 사츠키
 
 image dd2 = "characters/dd2.png" # 디지대 2번 여자
 
@@ -136,8 +142,8 @@ label start:
                             jump Chapter1_7
                         "Chapter 1-8":
                             jump Chapter1_8
-                    #     "Chapter 1-9":
-                    #         jump Chapter1_4
+                        "Chapter 1-9":
+                            jump Chapter1_9
                     #     "Chapter 1-10":
                     #         jump Chapter1_4
 
@@ -200,13 +206,14 @@ label Chapter_P:
 # 챕터 1-1 시작
 label Chapter1_1:
 
+    scene black with blinds
     scene bg_chap_1_1 with blinds
 
     voice "audio/voice/v1.mp3"
     "Chapter1-1" "Eiji: Wolf of ninth avenue" 
     
     scene bg_chap_1_1_1 with fade
-    voice "audio/voice/v2.mp3"
+    voice "audio/voice/v2.mp3" 
     f "와이어 프레임으로 된 T-REX가 달린다."
 
     voice "audio/voice/v3.mp3"
@@ -505,7 +512,7 @@ label Chapter1_1:
     f "물기에 불은 종이컵의 드링크를 들이키고, 에이지는 다시 GriMM을 넘겨보기 시작했다."
 
     "Chapter 1-1 End..." with Pause(20)
-
+# 챕터 1-2 시작
 label Chapter1_2:   
 
     scene black with blinds
@@ -904,7 +911,7 @@ label Chapter1_2:
     f "그곳에는――"
 
     "Chapter 1-2 End..." with Pause(20)
-
+# 챕터 1-3 시작
 label Chapter1_3:
 
     scene black with blinds
@@ -1266,7 +1273,7 @@ label Chapter1_3:
     ryusenji "디지몬은 살아 있다네"
 
     "Chapter 1-3 End..." with Pause(20)
-
+# 챕터 1-4 시작
 label Chapter1_4:
 
     scene black with blinds
@@ -1855,7 +1862,7 @@ label Chapter1_4:
     f "하츠네는 오늘 중에서 가장 미묘한 반응을 돌려주는 것이었다."
 
     "Chapter 1-4 End..." with Pause(20)
-
+# 챕터 1-5 시작
 label Chapter1_5:
 
     scene black with blinds
@@ -2344,7 +2351,7 @@ label Chapter1_5:
     hime "펄스몬…… 해커 저지! 증거품 내놔, 이 자식아~~~~!" with vpunch
     
     "Chapter 1-5 End..." with Pause(20)
-
+# 챕터 1-6 시작
 label Chapter1_6:
 
     scene black with blinds
@@ -2641,15 +2648,16 @@ label Chapter1_6:
     f "며칠 후, 큰일이 일어나 버렸다."
 
     show bg_chap_1_6_3 with fade
-    "Chapter 1-6 End..." with Pause(20)
 
+    "Chapter 1-6 End..." with Pause(20)
+# 챕터 1-7 시작
 label Chapter1_7:
 
     scene black with blinds
     scene bg_chap_1_7 with blinds
 
     voice "audio/voice/v1.mp3"
-    "Chapter1-6" "Eiji: Wolf of ninth avenue" 
+    "Chapter1-7" "Eiji: Wolf of ninth avenue" 
 
     
     scene black with blinds
@@ -3106,25 +3114,792 @@ label Chapter1_7:
 
     voice "audio/voice/v1_7_140.mp3"
     e "크래커요"  
-    
+
     voice "audio/voice/v1_7_141.mp3"  
     ryusenji "그럼「크랙팀」을 알고 있겠지"
 
     "Chapter 1-7 End..." with Pause(20)
-
+# 챕터 1-8 시작
 label Chapter1_8:
 
     scene black with blinds
     scene bg_chap_1_8 with blinds
  
     voice "audio/voice/v1.mp3"
-    "Chapter1-6" "Eiji: Wolf of ninth avenue" 
+    "Chapter1-8" "Eiji: Wolf of ninth avenue" 
 
+    scene bg_chap_1_8_1 with fade
 
+    voice "audio/voice/v1_8_1.mp3"
+    f "――「크랙팀」"
 
+    voice "audio/voice/v1_8_2.mp3"
+    f "네트워크의 자유, 디지털 월드의 자유를 목적으로 하여"
 
+    voice "audio/voice/v1_8_3.mp3"
+    f "그 공통 이념의 아래 찬동하는 익명의 개인들로 구성된 커뮤니티다."
 
+    voice "audio/voice/v1_8_4.mp3"
+    f "회원 명부가 있는 것도 아니다."
 
+    voice "audio/voice/v1_8_5.mp3"
+    f "사이좋은 동호회 클럽도 아니다."
+
+    voice "audio/voice/v1_8_6.mp3"
+    f "크랙팀 내에서도 다양한 그룹이 있다."
+
+    voice "audio/voice/v1_8_7.mp3"
+    f "사상도, 행동원리도 목적도 다르다. "
+
+    voice "audio/voice/v1_8_8.mp3"
+    f "종종 팀 내에서도 다투기도 한다."
+
+    voice "audio/voice/v1_8_9.mp3"
+    f "크랙팀은 기존의 법과 권력―― 정부와는 반목하고 있다."
+
+    voice "audio/voice/v1_8_10.mp3"
+    f "반 사회적 집단이라는 꼬리표를 단, 부적합자 집단."
+
+    voice "audio/voice/v1_8_11.mp3"
+    f "그것이 소거법에 따른 공통점이었다."
+
+    voice "audio/voice/v1_8_12.mp3"
+    f "그럼에도 크래커라 자칭하는 자는 많든 적든 크랙팀의 이념에 찬동하여, 느긋하게 그 활동에 참가하고 있는 것이다."
+
+    scene bg_chap_1_2_4 with fade
+    show hacktv at Position(xalign = 0.5,yalign = 0.3) with squares
+
+    voice "audio/voice/v1_8_13.mp3"
+    f "모니터에 GriMM의 영상 서비스에 업로드된 크랙팀 선전용 숏 무비가 재생되었다."
+
+    voice "audio/voice/v1_8_14.mp3"
+    ryusenji nomal "――네트워크의 자유, 디지털 월드의 자유…… 디지털 월드에는 국경도 법률도 없다."
+
+    voice "audio/voice/v1_8_15.mp3"
+    ryusenji "그래서 디지몬을 사용한 모든 활동을 어떤 정부, 법률로도 막을 수는 없다"
+
+    voice "audio/voice/v1_8_16.mp3"
+    f "류센지가 말한다."
+
+    voice "audio/voice/v1_8_17.mp3"
+    f "그것이 크래커 측이 자주 말하는 변명이다."
+
+    voice "audio/voice/v1_8_18.mp3"
+    e nomal "어려운 걸 잘 모르겠지만. 연줄도 학력도 아무것도 없는 제게는 가장 벌어먹고 살 수 있는 일이었으니까요"
+
+    voice "audio/voice/v1_8_19.mp3"
+    f "크래커에 흥미를 갖게 된 것은 고등학교 재학 중이었다."
+
+    voice "audio/voice/v1_8_20.mp3"
+    f "살짝 나쁜 선배에게 꼬드겨져 크래커 놀이로 용돈 벌이를 하는 걸 배웠다…… 자주 있는 이야기다."
+
+    voice "audio/voice/v1_8_21.mp3"
+    f "적성에 맞는 걸지도 모른다. 아르바이트로서는 충분히 돈이 됐다."
+
+    voice "audio/voice/v1_8_22.mp3"
+    f "그것이 여러 사정이 있어서 대학 수험을 포기하고 나서 에이지는 진심으로 크래커를 목표로 삼게 되었다."
+
+    voice "audio/voice/v1_8_23.mp3"
+    f "이걸로 인생을 먹고 살아볼까, 라고."
+
+    voice "audio/voice/v1_8_24.mp3"
+    ryusenji "원하는 대로 할 수 있어서 좋겠군"
+
+    voice "audio/voice/v1_8_25.mp3"
+    e "정말 그래요! 원하는 대로 일할 수 있는 것 뿐이지만요"
+
+    voice "audio/voice/v1_8_26.mp3"
+    ryusenji "하지만 정부에게 있어서 크래커는 민폐만 끼치는 네트워크의 불량배일세"
+
+    voice "audio/voice/v1_8_27.mp3"
+    e "함정에는 신경 쓰고 있어요! 욕심 부리면 「디지대」가 오니까 말이죠"
+
+    voice "audio/voice/v1_8_28.mp3"
+    f "경찰의 사이버 범죄를 다루는 부서에는 디지몬 범죄에 대응하는 팀이 있다."
+
+    scene black with fade
+    show dd at Position(yalign = 0.4) with dissolve
+
+    voice "audio/voice/v1_8_29.mp3"
+    f "통칭 디지대."
+
+    voice "audio/voice/v1_8_30.mp3"
+    f "공개적으로 드러나지 않은 뒤쪽 조직이지만, 크래커 사이에서는 알려져 있었다."
+
+    voice "audio/voice/v1_8_31.mp3"
+    f "아주 최근에도 디지타마를 밀렵하고 있던 크래커 놀이를 하던 고등학생이 디지대에 검거되었다는 것 같지만."
+
+    scene bg_chap_1_2_4 with fade
+    show hacktv at Position(xalign = 0.5,yalign = 0.3) with squares
+
+    voice "audio/voice/v1_8_32.mp3"
+    ryusenji nomal "크랙팀에는 참가하고 있지만 이념에는 그다지 흥미가 없다."
+
+    voice "audio/voice/v1_8_33.mp3"
+    ryusenji "자네에게 있어서 자유란, 그건가, 패션 감각인가"
+
+    voice "audio/voice/v1_8_34.mp3"
+    e nomal "얕아 빠졌지요~! 그래도, 지금은 일거리와 실적을 원하거든요!"
+
+    voice "audio/voice/v1_8_35.mp3"
+    ryusenji "실적인가…… 자네의 미래는, 어디로 이어져 있는 걸려나. 에이지 군, 자네…… 그래, 꿈은"
+
+    voice "audio/voice/v1_8_36.mp3"
+    e "저…… 이기고 싶어요!"
+
+    voice "audio/voice/v1_8_37.mp3"
+    f "에이지는 솔직한 기분을 대답했다."
+
+    voice "audio/voice/v1_8_38.mp3"
+    ryusenji "호오, 무엇에 이기고 싶지?"
+
+    voice "audio/voice/v1_8_39.mp3"
+    e "현실에서는 어렵지만 넷에서라면…… 그렇다기보다 넷에서 거물이 되어, 올라가면 현실도 바뀔 테니까!" 
+
+    voice "audio/voice/v1_8_40.mp3"
+    e "그러기 위해서 벌어서, 디지몬을 진화시켜서…… 초일류 크래커가 되고 싶어! 그야말로 내 팀을 가질 수 있을 정도의!"
+
+    voice "audio/voice/v1_8_41.mp3"
+    ryusenji "그것은 크래커가 아니면 이룰 수 없는 건가?"
+
+    voice "audio/voice/v1_8_42.mp3"
+    e "응! 제게 있어서 디지털 월드는…… 분명, 제 인생을 바꿔줄 장소니까……!"
+
+    voice "audio/voice/v1_8_43.mp3"
+    f "예감이 있다."
+
+    voice "audio/voice/v1_8_44.mp3"
+    f "이 일은 에이지가 초일류 크래커가 될, 인생을 바꿀 천재일우의 찬스다."
+
+    voice "audio/voice/v1_8_45.mp3"
+    e "――저도 류센지 교수님과 같은 레벨이 되고 싶어요!"
+
+    voice "audio/voice/v1_8_46.mp3"
+    e "모니터나 관측 데이터가 아닌, 인간의 오감으로 직접 디지털 월드를 파악하는…… 그런 게 가능하다면, 할 수 있다면……!"
+
+    voice "audio/voice/v1_8_47.mp3"
+    f "있는 그대로."
+
+    voice "audio/voice/v1_8_48.mp3"
+    f "――디지털 월드에서, 만약 살아갈 수 있다면."
+
+    voice "audio/voice/v1_8_49.mp3"
+    f "에이지의 그 말을 들었을 때, 류센지는 확실히 웃은 것이었다."
+
+    hide hacktv with dissolve
+    show ryusenji at Position(xalign = 0.5,yalign = -0.2) with dissolve
+
+    voice "audio/voice/v1_8_50.mp3"
+    ryusenji "디지털 월드는 말이지…… 사람의 인생을 바꾼다네"
+
+    voice "audio/voice/v1_8_51.mp3"
+    f "나처럼 말이지, 라고."
+
+    voice "audio/voice/v1_8_52.mp3"
+    f "에이지는, 그것을 세계에서도 손에 꼽을 자산가가 된, 성공한 사람의 말로서 받아들였다."
+
+    voice "audio/voice/v1_8_53.mp3"
+    f "자신에게는 지금, 아무것도 없다."
+
+    voice "audio/voice/v1_8_54.mp3"
+    f "재산도 학력도, 덤으로 여친도."
+
+    voice "audio/voice/v1_8_55.mp3"
+    f "그럴 마음의 여유가 없었다. 다다미 3장 넓이의 무척 좁은 원룸, 건강에 나쁘고 불규칙한 식생활."
+
+    voice "audio/voice/v1_8_56.mp3"
+    f "살아가기만 할 뿐이라면 젊은 동안에는 되겠지만."
+
+    voice "audio/voice/v1_8_57.mp3"
+    f "그래서는 그저 늙으면서 시간을 소비할 뿐인 것이다."
+
+    voice "audio/voice/v1_8_58.mp3"
+    f "그래서는 재미없다."
+
+    voice "audio/voice/v1_8_59.mp3"
+    e "나는…… 지금의 인생을 바꾸고 싶어! 디지털 월드에서 이기고 싶어!"
+
+    voice "audio/voice/v1_8_60.mp3"
+    f "――각오."
+
+    voice "audio/voice/v1_8_61.mp3"
+    f "그래서, 모처럼 찾아온 류센지와의 연줄을 절대로 놓을 생각은 없었다."
+
+    voice "audio/voice/v1_8_62.mp3"
+    f "아무리 힘든 일이 있더라도, 이 육성 일도 디지몬 링커도, 루가몬도…… 눈에 흙이 들어가더라도 자기 것으로 삼고 싶다."
+
+    voice "audio/voice/v1_8_63.mp3"
+    f "무슨 일이 있더라도, 다."
+
+    voice "audio/voice/v1_8_64.mp3"
+    ryusenji "계속 봐 왔을 터인, 알고 있었을 터인 세계를, 보는 측면을 바꾸는 것으로 처음으로 이해할 수 있는 일도 있지"
+
+    voice "audio/voice/v1_8_65.mp3"
+    f "류센지가 중얼거렸다."
+
+    voice "audio/voice/v1_8_66.mp3"
+    e "…………?"
+
+    voice "audio/voice/v1_8_67.mp3"
+    ryusenji "잘 됐군. 실로 좋아. 루가몬을 육성해주었으면 한다고는 했지만, 그건 동시에 에이지 군, 자네를 테스트하고 있었던 걸세"
+
+    voice "audio/voice/v1_8_68.mp3"
+    e "아-…… 또 그런 소리 하신다니까!"
+
+    voice "audio/voice/v1_8_69.mp3"
+    ryusenji "사상까지 크랙팀에 푹 빠져있었더라면. "
+
+    voice "audio/voice/v1_8_70.mp3"
+    ryusenji "자유에 취해서, 자유를 낭비하고 있는 행복하고 어리석은 젊은이었다면 이 일을 부탁할 생각은 없었어"
+
+    scene black with fade
+    show soc at Position(yalign = 0.4) with dissolve
+
+    voice "audio/voice/v1_8_71.mp3"
+    f "――「SoC」"
+
+    voice "audio/voice/v1_8_72.mp3"
+    f "3글자의 알파벳을 모은 문장(徽章)―― 배지."
+
+    voice "audio/voice/v1_8_73.mp3"
+    f "선전 무비에 등장한 이 마크는, 넷의 언더그라운드를 들여다본 자라면 본 적이 있을 터이다."
+
+    hide soc with dissolve
+    scene bg_chap_1_2_4 with fade
+    show ryusenji at Position(xalign = 0.5,yalign = -0.2) with dissolve
+
+    voice "audio/voice/v1_8_74.mp3"
+    e nomal "선즈 오브 케이오스……！"
+
+    voice "audio/voice/v1_8_75.mp3"
+    f "에이지는 숨을 삼켰다."
+
+    voice "audio/voice/v1_8_76.mp3"
+    ryusenji "혼돈의 아들들, 이라고 하면 되려나. 알고 있겠지"
+
+    voice "audio/voice/v1_8_77.mp3"
+    e "물론이죠! 초 유명한 크래커 집단……"
+
+    voice "audio/voice/v1_8_78.mp3"
+    ryusenji "자네의 SoC에 대한 솔직한 인상은?"
+
+    voice "audio/voice/v1_8_79.mp3"
+    e "…………"
+
+    voice "audio/voice/v1_8_80.mp3"
+    f "에이지는 대답했다." 
+
+    voice "audio/voice/v1_8_81.mp3"
+    e "위험한 놈들, 이려나요"
+
+    voice "audio/voice/v1_8_82.mp3"
+    f "그들은 초일류다. 동경하는 마음은 있다."
+
+    voice "audio/voice/v1_8_83.mp3"
+    f "하지만, 무사태평하고 요령 있게 인생을 즐기고 싶다면 관련되어서는 안 되는 무리다."
+
+    voice "audio/voice/v1_8_84.mp3"
+    f "과격파."
+
+    voice "audio/voice/v1_8_85.mp3"
+    f "크랙팀에서도 최고 우익이라고 하는 무투파 조직."
+
+    voice "audio/voice/v1_8_86.mp3"
+    e "――디지몬을 사용한 범죄…… 정보 절도, 기업 협박, 사이버 테러, 뭐든 다 있지."
+
+    voice "audio/voice/v1_8_87.mp3"
+    e "하지만 SoC의 리더는 카리스마가 있다! 그 『키클롭스(외눈 거인) 사건』의 주도자, 세계와 맞대결한 전설의 크래커 「타르타로스」……!"
+
+    voice "audio/voice/v1_8_88.mp3"
+    f "키클롭스 사건에 대해 여기서 언급하지는 않는다."
+
+    voice "audio/voice/v1_8_89.mp3"
+    f "크래커 그리고 크랙팀이라는 존재, 디지털 월드의 존재를, 국제 사회의 수뇌들이 무시할 수 없게 된, 커다란 계기가 된 일이었다."
+
+    voice "audio/voice/v1_8_90.mp3"
+    f "SoC의 리더, 크래커 타르타로스는 정체불명."
+
+    voice "audio/voice/v1_8_91.mp3"
+    f "일본인이라는 것 같다는 것 이외에는 소문다운 소문도 없다."
+
+    voice "audio/voice/v1_8_92.mp3"
+    ryusenji "다크 히어로라고 하는 건가. 타르타로스는 인기인이다. 나 같은 것보다도, 훨씬 더"
+
+    voice "audio/voice/v1_8_93.mp3"
+    f "류센지는 웃었다."
+
+    voice "audio/voice/v1_8_94.mp3"
+    e "GriMM에도 타르타로스의 신자는 많지만…… 그런 과격파가 지나치게 눈에 띄면 법 규제가 엄격해진다고 싫어하는 녀석도 똑같이 있어요"
+
+    voice "audio/voice/v1_8_95.mp3"
+    ryusenji "그 점일세"
+
+    voice "audio/voice/v1_8_96.mp3"
+    f "류센지는 에이지를 봤다."
+
+    voice "audio/voice/v1_8_97.mp3"
+    ryusenji "그들 SoC는 너무나도…… 나쁜 의미로 디지털 월드에 간섭하고 있어."
+
+    voice "audio/voice/v1_8_98.mp3"
+    ryusenji "과한 간섭에 의해 디지몬의 생태계, 나아가서는 인간 사회의 리스크를 낳고 있지."
+
+    voice "audio/voice/v1_8_99.mp3"
+    ryusenji "당연히 내 연구에도. 나는, 그렇게 되는 것을 지극히 우려하고 있네"
+
+    voice "audio/voice/v1_8_100.mp3"
+    e "...네"
+
+    voice "audio/voice/v1_8_101.mp3"
+    ryusenji "디지털 월드와 리얼월드…… 법적 규제의 강화에 의해 두 세계가 지금 이상으로 격리되어 버리는 일은, 인류에게 있어서도 디지몬에게 있어서도 불행한 일이다. "
+    
+    voice "audio/voice/v1_8_102.mp3"
+    ryusenji "그렇게 생각하지는 않는가?"
+
+    voice "audio/voice/v1_8_103.mp3"
+    f "류센지는, 크래커에 대해서는 중립적인 입장을 취하고 있었다."
+
+    voice "audio/voice/v1_8_104.mp3"
+    f "그렇지 않다면 에이지에게 일을 의뢰하거나 하지는 않았을 것이다."
+
+    voice "audio/voice/v1_8_105.mp3"
+    f "하지만, 디지몬을 사용한 흉악 범죄, 테러리스트에 대해서는 깊게 우려하고 있다."
+
+    voice "audio/voice/v1_8_106.mp3"
+    f "그것은, 단적으로 말해서 디지몬을 사랑하고 있기 때문이다."
+
+    voice "audio/voice/v1_8_107.mp3"
+    f "류센지가 용서하지 못하는 것은, 디지몬을 악용해서 위험에 빠뜨리는 인간이며 크래커였다."
+
+    voice "audio/voice/v1_8_108.mp3"
+    e "교수님이라면 정부라던가 정치가에게도 인맥이 통하는 거 아닌가요……?"
+
+    voice "audio/voice/v1_8_109.mp3"
+    f "에이지는 되물었다."
+
+    voice "audio/voice/v1_8_110.mp3"
+    f "류센지는 테크놀로지 연관 정부 유식자, 디지털 월드 특별 고문이다."
+
+    voice "audio/voice/v1_8_111.mp3"
+    f "분명 경찰의 장비품 선정에도 관련되어 있었을 터이다."
+
+    voice "audio/voice/v1_8_112.mp3"
+    ryusenji "물론 로비는 해 왔지. 그렇지만, 지금 총리는 검토만 하고 실행력이 없어서 말일세……"
+
+    voice "audio/voice/v1_8_113.mp3"
+    ryusenji "경찰로 말하자면 법률에 따라 크래커를 단속할 뿐이야."
+
+    voice "audio/voice/v1_8_114.mp3"
+    ryusenji "관련법은 미정비, 불충분해서…… 좀처럼 잘 풀리지 않아"
+
+    voice "audio/voice/v1_8_115.mp3"
+    e "교수님…… 왠지 이야기가, 위험한 쪽으로 향하고 있는 것 같은데요"
+
+    voice "audio/voice/v1_8_116.mp3"
+    ryusenji "그만 듣겠는가"
+
+    voice "audio/voice/v1_8_117.mp3"
+    e "설마요……! 두근거리기 시작했어요!"
+
+    voice "audio/voice/v1_8_118.mp3"
+    f "크래커로서 해 나가겠다고 결정했을 때부터, 언젠가는―― 이런 일을 하고 싶다고 생각해 왔다."
+
+    voice "audio/voice/v1_8_119.mp3"
+    f "디지몬의 포획이나 디지타마 채취, 정크 데이터 수집이 아니라."
+
+    voice "audio/voice/v1_8_120.mp3"
+    f "크래커로서, 다른 크래커를 상대하는…… 그런 위험한 향기가 감도는 어른의 일을."
+
+    voice "audio/voice/v1_8_121.mp3"
+    ryusenji "잠입 조사다, 선즈 오브 케이오스에."
+
+    voice "audio/voice/v1_8_122.mp3"
+    ryusenji "수수께끼의 리더 타르타로스의 목적에 다가가주었으면 한다."
+
+    voice "audio/voice/v1_8_123.mp3"
+    ryusenji "모든 것은 디지털 월드와 디지몬을 위해서다, 그들을 지키기 위해서……!"
+    
+    "Chapter 1-8 End..." with Pause(20)
+# 챕터 1-9 시작
+label Chapter1_9:
+
+    scene black with blinds
+    scene bg_chap_1_9 with blinds
+ 
+    voice "audio/voice/v1.mp3"
+    "Chapter1-9" "Eiji: Wolf of ninth avenue" 
+
+    voice "audio/voice/v1_9_1.mp3"
+    f "에이지는 류센지 교수에게, 무투파 크래커 집단 선즈 오브 케이오스(SoC)의 조사를 의뢰받았다."
+
+    voice "audio/voice/v1_9_2.mp3"
+    f "――한 크래커로서 SoC에 참가. 리더 타르타로스와 접촉을 꾀하여, 그 목적을 파헤쳐 주었으면 한다."
+
+    voice "audio/voice/v1_9_3.mp3"
+    f "크랙팀에서도 최악 최강이라고 일컬어지는 무투파 조직 SoC."
+
+    voice "audio/voice/v1_9_4.mp3"
+    f "그것이 최근, 대규모 「활동」을 계획하고 있다는 징후가 있다고 한다."
+
+    voice "audio/voice/v1_9_5.mp3"
+    f "전 세계의 첩보기관, 경찰이 움직이고 있지만, 류센지로서도 디지털 월드에 관한 것은 전혀 남 일은 아니었다. "
+
+    voice "audio/voice/v1_9_6.mp3"
+    f "그래서 독자적으로 크래커를 고용하여 조사를 하는 것이다."
+
+    voice "audio/voice/v1_9_7.mp3"
+    f "――디지털 월드와 디지몬을 지키기 위해."
+
+    voice "audio/voice/v1_9_8.mp3"
+    f "보수는 파격적. 하지만, 무엇보다도 에이지의 마음을 움직였던 것은 류센지의, 그 마음이었다."
+
+    voice "audio/voice/v1_9_9.mp3"
+    f "SoC와 타르타로스의 활동에 의해, 국제사회가 크래커뿐 아니라 디지털 월드를 위험시하여, 디지몬을 적시하게 된다면……."
+
+    voice "audio/voice/v1_9_10.mp3"
+    f "――디지털 월드의 생태계, 즉 디지몬의 생명에 관련된 일이 된다."
+
+    voice "audio/voice/v1_9_11.mp3"
+    f "한때 유럽이나 미국, 일본에서도, 가축을 덮친다는 이유만으로 늑대는 절멸당했다."
+
+    voice "audio/voice/v1_9_12.mp3"
+    f "그런 비극을 디지털 월드에서 재현되는 일은 피해야만 한다."
+
+    voice "audio/voice/v1_9_13.mp3"
+    f "디지몬은 살아 있다."
+
+    voice "audio/voice/v1_9_14.mp3"
+    f "존경하는 류센지의 생각을 듣고, 에이지는 강하게 영향을 받았다."
+
+    voice "audio/voice/v1_9_15.mp3"
+    e "즉, 나는 스파이라는 거지"
+
+    voice "audio/voice/v1_9_16.mp3"
+    f "에이지는 말을 걸었다."
+
+    scene bg_chap_1_6_2 with fade # 추후 이미지 변경 필요
+
+    voice "audio/voice/v1_9_17.mp3"
+    f "자택인 무척이나 좁은 원룸."
+
+    voice "audio/voice/v1_9_18.mp3"
+    f "2층 침대의 이불 발치에, 복슬복슬한 무언가가 배를 내보이며 벌렁 드러누워 있다."
+
+    voice "audio/voice/v1_9_19.mp3"
+    f "루가몬, 의 홀로라이즈다."
+
+    voice "audio/voice/v1_9_20.mp3"
+    f "임대 주거라 애완동물은 금지지만, 디지털 펫은 꼭 그렇지만도 않다."
+
+    voice "audio/voice/v1_9_21.mp3"
+    e "알겠냐 루가몬! 우리는 SoC에 잠입한다. 전설의 크래커 타르타로스의 정체에 다가서는 거야. 얕보이지 말라고"
+
+    voice "audio/voice/v1_9_22.mp3"
+    f "말을 건다."
+
+    voice "audio/voice/v1_9_23.mp3"
+    f "디지몬에게 말을 걸다니, 지금까지 해 본 적은 없었다."
+
+    voice "audio/voice/v1_9_24.mp3"
+    f "루가몬이 드러누운 채로 이누코로(犬コロ)처럼 목을 갸웃거렸다."
+
+    voice "audio/voice/v1_9_25.mp3"
+    f "디지몬이 사람의 말을 어디까지 이해하는지에 관해서는 다양한 견해가 있지만……."
+
+    voice "audio/voice/v1_9_26.mp3"
+    e "뭐라고 해도 상대는 SoC! 크래커 중에서도 확고한 초 무서운 형씨들이다."
+
+    voice "audio/voice/v1_9_27.mp3"
+    e "평범한 티라노몬으로는 얕보이고 말 거야. 그런가 하면 너는, 성장기라고는 해도 레어한 느낌은 풀풀 나니까"
+
+    voice "audio/voice/v1_9_28.mp3"
+    f "에이지의 ――크래커 팽의 이름을 선전한다. 우선은, 거기서부터다."
+
+    voice "audio/voice/v1_9_29.mp3"
+    f "손을 뻗는다."
+
+    voice "audio/voice/v1_9_30.mp3"
+    f "루가몬의 이마에 있는, 그 파츠 부분을 쓰다듬는다."
+
+    voice "audio/voice/v1_9_31.mp3"
+    f "물론 실제로는 만질 수 없지만…… "
+
+    voice "audio/voice/v1_9_32.mp3"
+    f "갑자기 루가몬은 으르렁거리며 이를 내보였다."
+
+    voice "audio/voice/v1_9_33.mp3"
+    e "아-, 싫은 거구나. 미안미안…… 그러고보니 옛날에 길렀던 개도 쓰다듬으려고 하면 기분 나빠했었던가"
+
+    voice "audio/voice/v1_9_34.mp3"
+    f "부모님은 잘 따랐었지만, 어째선지 에이지에게만은 그런 태도를 취했던 개였다."
+
+    voice "audio/voice/v1_9_35.mp3"
+    "삐 삐 삐 삐"
+
+    voice "audio/voice/v1_9_36.mp3"
+    f "약속의, 일 시간이다."
+
+    voice "audio/voice/v1_9_37.mp3"
+    e "갈까, 루가몬"
+
+    voice "audio/voice/v1_9_38.mp3"
+    f "홀로라이즈를 해제. 루가몬은 디지몬 링커의 화면 속으로 돌아간다."
+
+    voice "audio/voice/v1_9_39.mp3"
+    f "보이스 채팅용 인컴을 귀에 꽂고, 에이지는 2층침대의 벽에 기대어 디지몬 링커의 메뉴를 열었다."
+
+    scene bg_chap_1_9_1 with fade
+
+    voice "audio/voice/v1_9_40.mp3"
+    "슈우우웅"
+
+    voice "audio/voice/v1_9_41.mp3"
+    f "헤드업으로 가상 모니터가 투영된다. 이것도 홀로라이즈 기술의 응용이다."
+
+    voice "audio/voice/v1_9_42.mp3"
+    f "ㅡㅡ 가상 모니터에 네트워크를 연결하고, GriMM으로 이동."
+
+    voice "audio/voice/v1_9_43.mp3"
+    f "SoC에 참가하는 것 자체는, 아무것도 어려울 것은 없다."
+
+    voice "audio/voice/v1_9_44.mp3"
+    f "GriMM의 멤버 모집에서 초대 코드를 손에 넣으면 아르바이트 모집 감각으로 SoC의 전용 채널에 참가가 가능하다."
+
+    voice "audio/voice/v1_9_45.mp3"
+    f "에이지는 미리 SoC에 응모하여, 약속을 잡아 두었던 것이었다."
+
+    voice "audio/voice/v1_9_46.mp3"
+    "면접관" "――SoC가 상대하는 것은, 정부 기관, 군, 경찰, 세계적 기업…… 그런 무리들입니다."
+
+    voice "audio/voice/v1_9_47.mp3"
+    "면접관" "요구되어지는 크래커 스킬은, 딱 잘라 말해 높지요. 더욱이 리스크밖에 없습니다"
+
+    voice "audio/voice/v1_9_48.mp3"
+    f "SoC의 선배 멤버가, 보이스 채팅으로 에이지의 상대를 해 주었다."
+
+    voice "audio/voice/v1_9_49.mp3"
+    f "온라인 면접이다."
+
+    voice "audio/voice/v1_9_50.mp3"
+    e nomal "참가 희망은 간단하지만, 크래커로서의 스킬이 없으면 문전박대인가"
+
+    voice "audio/voice/v1_9_51.mp3"
+    "면접관" "당신은 어떤가요, 신인 씨"
+
+    voice "audio/voice/v1_9_52.mp3"
+    e "「팽이야」"
+
+    voice "audio/voice/v1_9_53.mp3"
+    "면접관" "네, 크래커 팽. 당신의, 지금 리얼에서의 생활을 천칭에 걸고서라도, SoC의 활동에 참가하고 싶습니까"
+
+    voice "audio/voice/v1_9_54.mp3"
+    f "상대의 유저 네임은 「면접관」이라고만 되어 있다."
+
+    voice "audio/voice/v1_9_55.mp3"
+    f "GriMM에서의 아이콘은 넥타이를 머리띠처럼 맨 정석적인 쇼와 샐러리맨풍. 왠지 모르게…… 계장? 목소리는, 꽤나 든 아저씨 같지만."
+
+    voice "audio/voice/v1_9_56.mp3"
+    e "저기…… 반대로, 스킬을 인정받으면 「타르타로스」를 만날 수 있거나 한 거야?"
+
+    voice "audio/voice/v1_9_57.mp3"
+    f "에이지는 점점 파고들었다."
+
+    voice "audio/voice/v1_9_58.mp3"
+    f "크래커끼리는, 네트워크상에서는 기본적으로 반말 OK, 털털한 말투가 된다."
+
+    voice "audio/voice/v1_9_59.mp3"
+    "면접관" "리더에게 흥미가?"
+
+    voice "audio/voice/v1_9_60.mp3"
+    f "면접관의 목소리에, 얼마간 경계의 색이 섞였다."
+
+    voice "audio/voice/v1_9_61.mp3"
+    e "그야 물론! 전설급의 천재 크래커잖아!"
+
+    voice "audio/voice/v1_9_62.mp3"
+    "면접관" "하하핫…… 당신, 엄청 어리군요. 고등학교…… 아니 중학생?"
+
+    voice "audio/voice/v1_9_63.mp3"
+    f "면접관은 웃었다."
+
+    voice "audio/voice/v1_9_64.mp3"
+    e "그러는 면접관 씨는 몇 살인가요?"
+
+    voice "audio/voice/v1_9_65.mp3"
+    "면접관" "환갑의 영감이라고 대답해도 17살 여고생이라고 대답해도, 그런 건 어떻게 증명하지요?"
+
+    voice "audio/voice/v1_9_66.mp3"
+    "면접관" "여기서는 각자가 믿는 식으로밖에 보이지 않고 들리지 않아요"
+
+    voice "audio/voice/v1_9_67.mp3"
+    e "굳이 자신의 네트워크 이용 능력이 높은 걸 주장하는 건, 어떤 특정한, 괴로운 세대의 아저씨의 특징이죠"
+
+    voice "audio/voice/v1_9_68.mp3"
+    f "에이지는 직감했다. 아마 면접관은 리얼에서도 아저씨다."
+
+    voice "audio/voice/v1_9_69.mp3"
+    "면접관" "…………"
+
+    voice "audio/voice/v1_9_70.mp3"
+    e "아, 계속 말씀해주세요"
+
+    voice "audio/voice/v1_9_71.mp3"
+    f "약간의 공백이 있었다."
+
+    voice "audio/voice/v1_9_72.mp3"
+    "면접관" "…………리더 타르타로스는 수수께끼입니다. 저 같은 말단 멤버는 목소리조차 들어본 적 없지요"
+
+    voice "audio/voice/v1_9_73.mp3"
+    e "수수께끼"
+
+    voice "audio/voice/v1_9_74.mp3"
+    f "그런 설정인가."
+
+    voice "audio/voice/v1_9_75.mp3"
+    "면접관" "당신이 스스로 생각하고 있는 것 같은 천재 크래커이고, 실적을 올린다면, 가만히 있어도 간부 중 누군가가 접촉해 오겠죠."
+
+    voice "audio/voice/v1_9_76.mp3"
+    "면접관" "간부의 채팅에 참가할 수 있다면, 타르타로스와 이야기할 수 있을지도"
+
+    voice "audio/voice/v1_9_77.mp3"
+    f "꽤나 앞길이 먼 것 같다……."
+
+    voice "audio/voice/v1_9_78.mp3"
+    f "리더 타르타로스에게 접근할 방법은 알았다. 어쨌든 SoC의 활동에 참가하여 척척 실적을 쌓는다. 실력주의란 것이다."
+
+    voice "audio/voice/v1_9_79.mp3"
+    e "그래서, 지금부터 맡을 일이 SoC의 채용 시험이란 거야?"
+
+    voice "audio/voice/v1_9_80.mp3"
+    "면접관" "그렇게 생각해도 상관없습니다. 참고로 난이도는 준 Ａ급 상당…… 파일은 GriMM에 공유해 두겠습니다. 미션 전용 채널을 열어두지요"
+
+    voice "audio/voice/v1_9_81.mp3"
+    f "가상 모니터에 작전의 개요가 표시되었다."
+
+    voice "audio/voice/v1_9_82.mp3"
+    "면접관" "――작전명은…… 음, 뭐든지 상관없습니다만"
+
+    voice "audio/voice/v1_9_83.mp3"
+    e "「뒷문의 늑대」작전"
+
+    voice "audio/voice/v1_9_84.mp3"
+    f "에이지는 작전명을 리퀘스트했다."
+
+    voice "audio/voice/v1_9_85.mp3"
+    "면접관" "…………? 그건"
+
+    voice "audio/voice/v1_9_86.mp3"
+    e "아니, 막 떠오른 거"
+
+    voice "audio/voice/v1_9_87.mp3"
+    f "깊은 의미는 없다."
+
+    voice "audio/voice/v1_9_88.mp3"
+    f "굳이 말하자면 늑대―― 루가몬의 첫 출진이라는 것."
+
+    voice "audio/voice/v1_9_89.mp3"
+    f "에이지가 크래커로서 각오를 굳혔다는, 뒤로 물러날 수는 없다는…… 기합이다."
+
+    voice "audio/voice/v1_9_90.mp3"
+    "면접관" "a wolf at the back gate…… 알겠습니다. 기니까 『늑대 작전』으로"
+
+    voice "audio/voice/v1_9_91.mp3"
+    e "너무 잘랐잖아-"
+
+    voice "audio/voice/v1_9_92.mp3"
+    "면접관" "난이도 준 A급…… 정말로 괜찮겠습니까? 십중팔구 당신의 소중한 디지몬을 속수무책으로 잃게 될 겁니다. 말할 것도 없지만 보증, 보상은 없습니다"
+
+    voice "audio/voice/v1_9_93.mp3"
+    e "라져. 환영회를 준비해 두라고"
+
+    voice "audio/voice/v1_9_94.mp3"
+    "면접관" "환영? 무엇을 말이죠"
+
+    voice "audio/voice/v1_9_95.mp3"
+    e "새로운 SoC의 간부 탄생을 축하하는"
+
+    voice "audio/voice/v1_9_96.mp3"
+    f "호언장담."
+
+    voice "audio/voice/v1_9_97.mp3"
+    f "하지만 아무 대책도 없는 것은 아니다. 에이지에게는 비장의 수가 있는 것이다."
+
+    scene black with fade
+
+    show ryusenji at Position (xalign =0.5, yalign = -0.2) with dissolve
+    voice "audio/voice/v1_9_98.mp3"
+    ryusenji "――SoC에의 잠입에 대비하여 자네의 디지몬 링커의 기능을 한정 해제했네."
+
+    scene bg_chap_1_9_1 with fade
+
+    voice "audio/voice/v1_9_99.mp3"
+    f "믿음직한 류센지는 이번 의뢰에 대비하여 크래커로서의 스킬을 한번에 올릴 수 있는 수단을 준비해 주었다."
+
+    voice "audio/voice/v1_9_100.mp3"
+    f "D4의 연구성과. 그야말로 「굴레」를 초월하기 위한――"
+
+    voice "audio/voice/v1_9_101.mp3"
+    e nomal "(봐 주겠어! 초일류가 보고 있는 세계를…… 할 수 있어! 이 디지몬 링커와, 류센지 교수님이 준 루가몬이 있으면!)"
+
+    voice "audio/voice/v1_9_102.mp3"
+    f "심호흡."
+
+    voice "audio/voice/v1_9_103.mp3"
+    "면접관" "작전의 내용은 파일을 확인해주세요. 그럼, 성공을 기원하겠습니다"
+
+    voice "audio/voice/v1_9_104.mp3"
+    e "고마워, 면접관 씨"
+
+    voice "audio/voice/v1_9_105.mp3"
+    f "에이지는 디지몬 링커의 화면을 바라보았다."
+
+    # 추후 이미지 추가 필요
+    #
+    #
+
+    voice "audio/voice/v1_9_106.mp3"
+    f "작은 화면 속에서, 루가몬이 이쪽을 보고 있다."
+
+    voice "audio/voice/v1_9_107.mp3"
+    f "무언으로."
+
+    voice "audio/voice/v1_9_108.mp3"
+    e "(디지몬이 살아 있다…… 류센지 교수님이 말한 의미를, 분명, 알 수 있을 거야!)"
+
+    voice "audio/voice/v1_9_109.mp3"
+    f "메뉴를 선택."
+
+    voice "audio/voice/v1_9_110.mp3"
+    "삐비빅"
+
+    voice "audio/voice/v1_9_111.mp3"
+    f "센서가 생체 정보를 계측, 바이탈 체크 뒤에 커맨드를 허가했다."
+
+    voice "audio/voice/v1_9_112.mp3"
+    f "한정 해제."
+
+    voice "audio/voice/v1_9_113.mp3"
+    f "의식은 빛이 되어 해방될 것이다."
+
+    voice "audio/voice/v1_9_114.mp3"
+    f "자,"
+
+    voice "audio/voice/v1_9_115.mp3"
+    f "――「마인드 링크」!"
+
+    scene black with flash
+    voice "audio/voice/v1_9_116.mp3"
+    "슈우우우웅"
+
+    scene bg_chap_1_9_4 with fade
+    "Chapter 1-9 End..." with Pause(20)
+
+# label Chapter1_10:
+
+#     scene black with blinds
+#     scene bg_chap_1_10 with blinds
+ 
+#     voice "audio/voice/v1.mp3"
+#     "Chapter1-10" "Eiji: Wolf of ninth avenue" 
 
 
 

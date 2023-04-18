@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2897: expected 'image_name_component' not found.
-    show 
-         ^
+File "game/script.rpy", line 217: expected statement.
+    fadeout 1.0
+             ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Apr 17 11:40:02 2023
+Tue Apr 18 15:26:35 2023
